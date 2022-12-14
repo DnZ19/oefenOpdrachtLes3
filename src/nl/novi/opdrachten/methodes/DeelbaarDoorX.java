@@ -24,4 +24,28 @@ package nl.novi.opdrachten.methodes;
  */
 
 public class DeelbaarDoorX {
+    public static void main(String[] args) {
+        int number = 3;
+        int divisible = 5;
+        divisibleCalc(number, divisible);
+    }
+
+    public static void divisibleCalc(int number, int divisible){
+
+        if (number % divisible == 0){
+            System.out.println("this number " + number + " is divisible by " + divisible);
+        } else {
+
+            if (number >= divisible) {
+                int deviation = number - divisible;
+                System.out.println(" This number isn't divisible by " + divisible + " please detract " + deviation + " from " + number);
+            } else {
+                int deviation = divisible - number;
+                System.out.println(" This number isn't divisible by " + divisible + " please add " + deviation + " to " + number);
+            }
+
+        }
+
+    }
+
 }

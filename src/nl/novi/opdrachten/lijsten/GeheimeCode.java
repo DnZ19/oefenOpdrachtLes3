@@ -1,13 +1,16 @@
 package nl.novi.opdrachten.lijsten;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class GeheimeCode {
 
     public static void main(String[] secret) {
 
         List<String> laResistanceMembers = new ArrayList<>();
+        Set<String> targetSet = new HashSet<>(laResistanceMembers);
 
         laResistanceMembers = addMembers(laResistanceMembers, "Arie");
         laResistanceMembers = addMembers(laResistanceMembers, "Sjaak");
@@ -40,4 +43,6 @@ public class GeheimeCode {
         members.add(name);
         return members;
     }
+
+
 }

@@ -6,8 +6,7 @@ public class Leeftijdscontrole {
     public static void main(String[] args) {
         Scanner userInputScanner = new Scanner(System.in);
 
-        System.out.println("Wat is uw leeftijd?");
-        int givenAge = userInputScanner.nextInt();
+
 
         /*
         In Nederland mag je alcoholische dranken kopen vanaf je 18e. Je moet echter tot je 25ste een ID kunnen tonen.
@@ -18,5 +17,21 @@ public class Leeftijdscontrole {
 
         Maak de beslissingsstructuur (if/else if/else) hieronder.
          */
+
+        while(true){
+
+            System.out.println("What is your age?");
+            int givenAge = userInputScanner.nextInt();
+
+            if (givenAge < 18){
+                System.out.println("You can't buy alcohol!");
+            } else if (givenAge > 25) {
+                System.out.println("You can buy alcoholic drinks without restrictions!");
+            } else if (givenAge >= 18 && givenAge < 25) {
+                System.out.println("You can buy alcoholic drinks, but you need to show some ID!");
+            }
+
+        }
+
     }
 }

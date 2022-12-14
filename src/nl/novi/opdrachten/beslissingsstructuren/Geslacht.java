@@ -6,8 +6,7 @@ public class Geslacht {
     public static void main(String[] args) {
         Scanner userInputScanner = new Scanner(System.in);
 
-        System.out.println("Wat is uw geslacht?");
-        String geslacht = userInputScanner.nextLine();
+
 
         /*
         Hier boven heeft de gebruiker zijn geslacht ingevoerd. Print met behulp van een beslissingsstructuur (if/else)
@@ -18,6 +17,25 @@ public class Geslacht {
 
         Bonus: Lukt het je om de code zo te maken dat hoofdletters genegeerd worden?
          */
+
+        while(true){
+
+            System.out.print("What is your sex? ");
+            String sex = userInputScanner.nextLine();
+
+            if (sex.equalsIgnoreCase("male")) {
+                System.out.println("Hi Sir!");
+
+            } else if (sex.equalsIgnoreCase("female")) {
+                System.out.println("Hi Mam!");
+
+            } else {
+                System.out.println("Hi person!");
+
+            }
+        }
+
+
 
     }
 
